@@ -10,11 +10,22 @@
 
 ## About me ##
 
-Since april'2016 till now I'm a system administrator in a company group. I'm great experienced in servicing domain controllers working at Windows Server 2008-2016, setting up Active Directory, DNS&DHCP servers and other server services, managing workstations, user's applications, resolving issues.
+Since april'2016 till now I'm a system administrator in a company group. I'm great experienced in servicing domain controllers working at Windows Server 2008-2016, setting up Active Directory, DNS&DHCP servers and other server services, managing workstations, user's applications, resolving issues.  
+Programming has always been my unattainable dream. But now, after few years in technical support, i find myself smart enough to develop my own code. So, i'm extremely aimed at learning deep into JS/FE development ang gaining an interesting job at big project.
 
 ## Skills ##
+Basics:
++ HTML, CSS, JavaScript
++ Git, GitHub
++ VS Code
 
 ## Code example ##
+
+```JavaScript
+function multiply(a, b=1){  
+  return a * b  
+}
+```  
 
 ## Education & courses ##
 
