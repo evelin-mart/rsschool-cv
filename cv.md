@@ -1,44 +1,56 @@
-# Evelin Martsina #
+---
+title: "Evelin Martina"
+---
+# Evelin Martina #
 
 ## contacts ##
 
 * __Location:__ Minsk, Belarus
 * __Phone:__+375 25 791-61-83
-* __e-mail:__ evalouis666@gmail.com
-* __GitHub:__ evelin-mart
+* __e-mail:__ <evalouis666@gmail.com>
+* __GitHub:__ [evelin-mart](https://github.com/evelin-mart)
 * __Discord:__ Evelin Martina (@evelin-mart)
 
 ## About me ##
 
-Since april'2016 till now I'm a system administrator in a company group. I'm great experienced in servicing domain controllers working at Windows Server 2008-2016, setting up Active Directory, DNS&DHCP servers and other server services, managing workstations, user's applications, resolving issues.  
-Programming has always been my unattainable dream. But now, after few years in technical support, i find myself smart enough to develop my own code. So, i'm extremely aimed at learning deep into JS/FE development ang gaining an interesting job at big project.
+Since april'2016 till now I was a _system administrator_ in a company group. I'm great experienced in servicing servers (such as DC, AD, DNS and DHCP), workstations, user's applications.
+Programming has always seemed like an unattainable dream to me. But now, after several years of technical support, I am tired of fixing somebody's bugs, I find myself smart enough to create my own!  
+ My big passion is learning, and studying programming is now more accessible than ever and it never ends. So, i'm extremely aimed at learning deep into _FrontEnd development_ and gaining an interesting job and keep learning.
+
+>A mind needs books as a sword needs a whetstone, if it is to keep it's edge.
 
 ## Skills ##
 Basics:
-+ HTML, CSS, JavaScript
-+ Git, GitHub
-+ VS Code
++ __HTML, CSS, JavaScript__
++ __Git, GitHub__
++ __VS Code__
 
 ## Code example ##
 
 ```JavaScript
-function multiply(a, b=1){  
-  return a * b  
+//reverse a string without using in-built methods
+
+function reverse(string) {
+  let i = string.length;
+  let reversed = '';
+  while (i) reversed += string[--i];
+return reversed;
 }
 ```  
 
-## Education & courses ##
+## Education ##
 
-* december'2021-present RS School «JavaScript/Front-end. Pre-School» (in progress)
 * 2012-2016 Belorussian State University of Informatics and Radioelectronics
 * 2008-2012 Belorussian State Academy of Telecommunications
+### courses ###
+* 2021 RS School «JavaScript/Front-end. Pre-School» (in progress)
 
 ## Experience ##
 
-My first project is Markdown [Curriculum Vitae](https://evelin-mart.github.io/rsschool-cv/cv) on GitHub Pages
+My first project is Markdown [Curriculum Vitae](https://evelin-mart.github.io/rsschool-cv/cv) on GitHub Pages [repository](https://github.com/evelin-mart/rsschool-cv/tree/gh-pages).
 
-To be continued...
+_To be continued..._
 
 ## English level ##
 
-__A2+__ according to Streamline test
+__A2+__ Pre-intermediate (according to Streamline tests)
