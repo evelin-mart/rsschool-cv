@@ -10,56 +10,89 @@
 </head>
 
 <body>
+	<div class="wrapper">
 
-	<aside>
+		<aside>
 
-		<section>
-		</section>
-
-		<section>
-			<h2>Skills</h2>
-		</section>
-
-		<section>
-			<h2>contacts</h2>
-		</section>
-
-	</aside>
-
-	<div class="main">
-		<header>
-			<h1>Evelin Martina</h1>
-			<h3>Junior Frontend Developer</h3>
-		</header>
-
-		<nav></nav>
-
-		<main>
 			<section>
-				<h2>About me</h2>
-
 			</section>
 
 			<section>
-				<h2>Education</h2>
-
+				<h2>Skills</h2>
 			</section>
 
 			<section>
-				<h2>Experience</h2>
-
+				<h2>contacts</h2>
 			</section>
 
-			<section>
-				<h2>Code example</h2>
+		</aside>
 
-			</section>
-		</main>
-		<footer>
+		<div class="main">
+			<header>
+				<h1>Evelin Martina</h1>
+				<h3>Junior Frontend Developer</h3>
+			</header>
 
-		</footer>
+			<nav>
+				<a href=#about>About me</a>
+				<a href=#edu>Education</a>
+				<a href=#exp>Experience</a>
+				<a href=#code>Code example</a>
+			</nav>
+
+			<main>
+				<section>
+					<h2 class="left" id='about'>About me</h2>
+
+					<article>
+						<p>Since april’2016 till now I was a system administrator in a company group.
+							I’m great experienced in servicing servers (such as DC, AD, DNS and DHCP),
+							workstations, user’s applications. Programming has always seemed like an unattainable dream to me.
+							But now, after several years of technical support, I am tired of fixing somebody’s bugs,
+							I find myself smart enough to create my own!</p>
+						<p>My big passion is learning, and studying programming is now more accessible than ever and it never
+							ends. So, i’m extremely aimed at learning deep into FrontEnd development to gain an interesting job
+							and
+							permanently improve my skills.</p>
+					</article>
+
+				</section>
+
+				<section>
+					<h2 class="right" id='edu'>Education</h2>
+					<ul>
+						<li>2021 RS School «JavaScript/Front-end. Pre-School» (in progress)</li>
+						<li>2012-2016 Belorussian State University of Informatics and Radioelectronics</li>
+						<li>2008-2012 Belorussian State Academy of Telecommunications</li>
+					</ul>
+
+				</section>
+
+				<section>
+					<h2 class="left" id='exp'>Experience</h2>
+					<p>My first project is Markdown Curriculum Vitae on GitHub Pages [repository].</p>
+					<p>To be continued…</p>
+				</section>
+
+				<section>
+					<h2 class="right" id='code'>Code example</h2>
+					<pre>
+//reverse a string without using in-built methods
+
+function reverse(string) {
+  let i = string.length;
+  let reversed = '';
+  while (i) reversed += string[--i];
+return reversed;
+}					</pre>
+				</section>
+			</main>
+
+			<footer>
+			</footer>
+		</div>
+
 	</div>
-
 </body>
 
 </html>

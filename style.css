@@ -1,24 +1,67 @@
 body {
 	display: flex;
 	justify-content: center;
+	/*overflow: hidden;*/
 	background-color: #e5e5e5;
+	color: white;
+	font-size: 16px;		
+}
+
+.wrapper {
+	display: flex;	
+	overflow: hidden;
+	height: 100%;
 }
 
 aside {
-	position: fixed;
-	top: 0px;
-	bottom: 0px;	
-	
 	display: flex;
-	flex-direction: column;	
+	flex-direction: column;
+	margin: 0 5px;
+	background: linear-gradient(to top left, rgba(224, 37, 206, 70%) 35%, rgba(3, 56, 244, 70%));	
 }
 
 .main {
 	display: flex;
 	flex-direction: column;
+	/*overflow: auto;*/
+	margin: 0 5px;	
+}
+
+header {
+	text-align: right;
+	background: linear-gradient(to top left, rgba(224, 37, 206, 70%)  13%, rgba(3, 56, 244, 70%));
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.2rem;
+}
+
+main h2.left {
+	text-align: left;
+	background: linear-gradient(to left, rgba(224, 37, 206, 70%)  3%, rgba(3, 56, 244, 70%));
+}
+
+main h2.right {
+	text-align: right;
+	background: linear-gradient(to right, rgba(224, 37, 206, 70%)  33%, rgba(3, 56, 244, 70%));
 }
 
 nav {
-	position: sticky;
-	top: 0px;
+	/*position: sticky;*/
+	display: flex;
+	justify-content: flex-end;
+	top: 0px;	
+}
+
+nav a {
+	/*display: inline-block;
+	width: 20%;*/	
+}
+
+p, ul, pre{
+	color: #001b41;
 }
