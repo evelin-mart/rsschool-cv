@@ -1,46 +1,56 @@
 body {
 	display: flex;
 	justify-content: center;
-	/*overflow: hidden;*/
+	overflow: hidden;
+	height: 100vh;
 	background-color: #e5e5e5;
 	color: white;
-	font-size: 16px;		
+	font-size: 14px;		
 }
 
 .wrapper {
-	display: flex;	
-	overflow: hidden;
+	display: flex;
+	width: 600px;	
 	height: 100%;
 }
 
 aside {
 	display: flex;
 	flex-direction: column;
+	flex: 1;
 	margin: 0 5px;
-	background: linear-gradient(to top left, rgba(224, 37, 206, 70%) 35%, rgba(3, 56, 244, 70%));	
+	background: linear-gradient(to top left, rgba(224, 37, 206, 60%) 35%, rgba(3, 56, 244, 60%));	
 }
 
 .main {
 	display: flex;
 	flex-direction: column;
-	/*overflow: auto;*/
+	flex: 3;
+	overflow: auto;
 	margin: 0 5px;	
+}
+
+.main::-webkit-scrollbar {
+	display: none;
 }
 
 header {
 	text-align: right;
-	background: linear-gradient(to top left, rgba(224, 37, 206, 70%)  13%, rgba(3, 56, 244, 70%));
+	background: linear-gradient(to top left, rgba(224, 37, 206, 60%)  13%, rgba(3, 56, 244, 60%));
 }
 
 h1 {
-	font-size: 2rem;
+	font: 3rem;
 }
 
 h2 {
-	font-size: 1.2rem;
+	font: 1.5rem;
+}
+h3 {
+	font: 1.2rem;
 }
 
-main h2.left {
+main h2.left {	
 	text-align: left;
 	background: linear-gradient(to left, rgba(224, 37, 206, 70%)  3%, rgba(3, 56, 244, 70%));
 }
