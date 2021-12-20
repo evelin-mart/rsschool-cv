@@ -5,8 +5,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/night-owl.min.css">
+	<script src="js/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
 	<title>Evelin Martina</title>
 </head>
 
@@ -17,18 +19,18 @@
 
 			<section>
 				<figure class="avatar">
-					<img src="images\avatar.jpg" alt='Avatar' class="avatar">
+					<img src="images/avatar.jpg" alt="avatar" class="avatar">
 					<figcaption>
 						<h3>Evelin Martina</h3>
 					</figcaption>
 				</figure>
 				<ul class="contacts">
 					<li>
-						<img src="images/uk.png">
+						<img src="images/uk.png" alt="english">
 						<span><strong>A2+</strong> Pre-intermediate</span>
 					</li>
 					<li>
-						<img src="images/location.png">
+						<img src="images/location.png" alt="location">
 						<span>Minsk, Belarus</span>
 					</li>
 				</ul>
@@ -40,7 +42,7 @@
 					<li>
 						<figure>
 							<img src="images/html5.png" alt='HTML5'>
-							<figcaption>HTML&nbsp5</figcaption>
+							<figcaption>HTML&nbsp;5</figcaption>
 						</figure>
 					</li>
 					<li>
@@ -80,19 +82,19 @@
 				<h2>contacts</h2>
 				<ul class="contacts">
 					<li>
-						<img src="images/email.png">
+						<img src="images/email.png" alt="email">
 						<span>email</span>
 					</li>
 					<li>
-						<img src="images/phone.png">
+						<img src="images/phone.png" alt="phone">
 						<span>phone</span>
 					</li>
 					<li>
-						<img src="images/github.png">
+						<img src="images/github.png" alt="github">
 						<a href="https://github.com/evelin-mart">evelin-mart</a>
 					</li>
 					<li>
-						<img src="images/discord.png">
+						<img src="images/discord.png" alt="discord">
 						<span>@evelin-mart</span>
 					</li>
 				</ul>
@@ -160,20 +162,28 @@
 						<div class="line"></div>
 						<h2 class="right" id='code'>Code example</h2>
 					</div>
-					<pre class="prettyprint">
-//reverse a string without using in-built methods
+					<pre>
+<code>//reverse a string without using in-built methods
 
 function reverse(string) {
   let i = string.length;
   let reversed = '';
   while (i) reversed += string[--i];
 return reversed;
-}
+}</code>
 </pre>
 				</section>
 			</main>
 
 			<footer>
+				<a href="https://rs.school/js/">
+					<img src="images/rs_school.svg" alt="RS school" class="logo">
+				</a>
+				<span>2021</span>
+				<a href="https://github.com/evelin-mart">
+					<img src="images/github.png" alt="github">
+					<span>evelin-mart</span>
+				</a>
 			</footer>
 		</div>
 
