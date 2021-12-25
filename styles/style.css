@@ -124,6 +124,7 @@ nav {
 	top: 0px;	
 	display: flex;
 	justify-content: flex-end;
+	z-index: 1;
 	padding: 0 var(--borderRad) 1rem 0;
 	background-color: var(--body-color);
 	letter-spacing: normal;   		
@@ -208,12 +209,6 @@ blockquote {
 
 .education li::marker {
 	color: var(--mainColor2);
-}
-
-pre {
-	padding: 0 0.7rem;
-	margin: 0.5rem 0;
-   font-style: normal;        
 }
 
 figure.avatar {
@@ -354,3 +349,39 @@ footer img {
 	height: 2rem;
 	padding-right: 1rem;
 }
+
+
+pre {
+	position: relative;
+	padding: 0 0.7rem;
+	margin: 0.5rem 0;
+   font-style: normal;        
+}
+
+button {
+	position: absolute;
+	bottom: 4rem;
+	right: 2rem;
+	width: 5rem;
+	font-size: 1rem;
+	font-family: sans-serif;
+	text-align: center;
+	line-height: 1.5rem;
+	text-transform: uppercase;
+	color: var(--textColor);
+	background-color: greenyellow;
+	animation: tryIt 2s infinite;
+}
+
+@keyframes tryIt {
+	0% { 
+		background-color: greenyellow;		
+	 }
+	50% { 
+		background-color: fuchsia;
+		color: white;		
+	 }
+	100% { 
+		background-color: greenyellow);		
+	 }
+  }
