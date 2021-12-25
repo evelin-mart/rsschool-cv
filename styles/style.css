@@ -2,7 +2,7 @@
 	--body-color: #e5e5e5;
 	--mainColor1: rgba(3, 56, 244, 65%);
 	--mainColor2: rgba(224, 37, 206, 65%);
-	--textColor: #130047;
+	--textColor: #1b035f;
 	--backColor: rgba(255, 255, 255, 45%);
 	--borderRad: 1.5rem; 
  }
@@ -30,6 +30,7 @@ aside {
 	flex: 3;
 	margin: 0 0.4rem;
 	text-align: center;
+	color: var(--textColor);
 	background: linear-gradient(to top left, var(--mainColor1) 35%, var(--mainColor2));
 	border-radius: var(--borderRad);	
 }
@@ -44,6 +45,10 @@ aside {
 
 .main::-webkit-scrollbar {
 	display: none;
+}
+
+.main section {
+	margin-bottom: 5rem;
 }
 
 header {	
@@ -63,6 +68,7 @@ h1 {
 
 h2 {   	
 	font-size: 1.7rem;
+	color: white;
 	text-shadow: 1px 1px 1px var(--mainColor1);	
 }
 
@@ -77,11 +83,24 @@ h3 {
 /*todo line*/
 .header {
 	display: flex;
+	align-items: center;
 	flex-wrap: nowrap;
 }
 
-.line {	
+.line-right {	
 	flex-grow: 1;
+	margin-left: 4.2rem;
+	height: 0.2rem;
+	background: linear-gradient(to left, var(--mainColor1), var(--mainColor2));
+	border-radius: var(--borderRad) 0 0 var(--borderRad);
+}
+
+.line-left {	
+	flex-grow: 1;
+	margin-right: 4.2rem;
+	height: 0.2rem;
+	background: linear-gradient(to left, var(--mainColor2), var(--mainColor1));
+	border-radius: 0 var(--borderRad) var(--borderRad) 0;
 }
 
 main h2.left {
@@ -99,14 +118,15 @@ main h2.right {
 	border-radius: var(--borderRad) 0 0 var(--borderRad);    
 	background: linear-gradient(to right, var(--mainColor1) 33%, var(--mainColor2));
 }
-/*todo inspect*/
+
 nav {
 	position: sticky;
 	top: 0px;	
 	display: flex;
 	justify-content: flex-end;
-	padding-bottom: 10px;
-	background-color: var(--body-color);   		
+	padding: 0 var(--borderRad) 1rem 0;
+	background-color: var(--body-color);
+	letter-spacing: normal;   		
 }
 
 nav ul {
@@ -121,26 +141,27 @@ nav li {
 
 nav a {
 	display: inline-block;
-	margin-right: -15px;
-   padding: 0.4em 18px;
+	margin-right: -1.5rem;
+   padding: 0.4rem 1.5rem;	
 	text-decoration: none;
+	text-align: center;
    font-size: 1rem;
    color: white;
    border-radius: 0 0 0 15px;
    background: linear-gradient(135deg, var(--mainColor1), var(--mainColor2));    
-	transition: 0.5s;	
+	transition: 0.3s;	
 }
 
 nav a:hover {	
 	z-index: 1;		
 	font-weight: bold;
 	background: linear-gradient(135deg, rgb(3, 56, 244), rgb(224, 37, 206));
-	transform: scale(1, 1.2) translate(0, 3px);		
+	transform: scale(1, 1.2) translate(-2px, 2.5px);		
 }
 
 nav a:active {
 	font-weight: normal;
-	box-shadow: inset 1px 0.1px 4px 4px var(--backColor);			
+	box-shadow: inset 0 0.5px 5px 5px var(--backColor);			
 }
 
 article {
@@ -151,6 +172,10 @@ article {
 	text-align: justify;
 	text-indent: 1.8rem;
 	line-height: 1.3rem;
+}
+
+article a {
+	color: var(--mainColor2);
 }
 
 p {
@@ -166,7 +191,7 @@ blockquote {
 	letter-spacing: initial;
 	color: var(--mainColor2);   
    border-radius: 0 var(--borderRad);   
-   background-color: var(--backColor);
+   background-color: var(--backColor);	
 }
 
 .education {
@@ -186,51 +211,44 @@ blockquote {
 }
 
 pre {
-	padding: 2px 5px;
-	margin: 0;
+	padding: 0 0.7rem;
+	margin: 0.5rem 0;
    font-style: normal;        
 }
 
 figure.avatar {
-	margin: 0;    
+	margin: 0 0 0.5rem 0;    
 	border-radius: var(--borderRad);	
 }
 
 img.avatar {
 	width: 9.5rem;
-	margin: 10px 20px 5px;
+	margin: 0.5rem;
 	border-radius: 50%;
-	box-shadow: 0px 0px 10px 1px #e5e5e5;
+	box-shadow: 0px 0px 0.5rem 1px var(--textColor);
 }
 
 aside h2 {
-	margin: 3px;
-	font-size: 1.3rem;
-	
+	margin: 0.5rem 0 0 0;
+	font-size: 1.5rem;	
 }
 
 aside h3 {	
-	margin-bottom: 7px;
+	margin: auto;
 }
 
 aside section {
-	margin: 3px 10px;
+	margin: 0.5rem 0.5rem 0 0.5rem;
+	padding-bottom: 0.5rem;
 	background-color: var(--backColor);
 	border-radius: var(--borderRad);	
 }
 
-aside a {
-	display: inline-block;
-	text-decoration: none;	
-	color: var(--textColor);
-}
-
-
-aside ul {
-	padding: 0 5px 5px;
-   margin: 0;
-	list-style: none;
-   font-style: normal;	 
+ul.skills {	
+   margin: 0 0.5rem;
+	padding: 0;
+   list-style: none;
+   font-style: normal;
 }
 
 .skills:hover li {
@@ -243,60 +261,96 @@ aside ul {
 	transition: 0.4s;	
 }
 
+.skills figcaption {
+	line-height: 0.9em;
+}
+
 li figure:hover {
 	transform: scale(1.2);		
 }
 
 li figure {	
-	margin: 0 0 6px;
-   padding: 0 0 3px;
-	transition: 0.4s;
+	margin: 0.5rem;   
+	transition: 0.4s;	
 }
 
 figure img {
 	width: 85%;	
 }
 
-.skills figcaption {
-	line-height: 0.9em;
+.location {
+	display: flex;
+   justify-content: flex-start;
+   align-items: center;
+	margin: 0 0.5rem 2px;
+	padding: 5px;	
+	font-style: normal;
+	background-color: var(--backColor);
+	border-radius: var(--borderRad);
+	}
+
+.location img {
+	width: 1rem;
+	padding: 0 0.5rem;	
 }
 
-ul.contacts li {
+aside a {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+	text-decoration: none;	
+	color: var(--mainColor2);
+	font-size: 1rem;	
+}
+
+ul.contacts {
+	padding: 0 0.5rem;
+   margin: 0;
+	list-style: none;
+   font-style: normal;	 
+}
+
+.contacts li {
 	display: flex;
    justify-content: flex-start;
    align-items: center;
 	padding: 5px;
 	margin-bottom: 2px;
 	background-color: var(--backColor);
-	border-radius: var(--borderRad);	 
+	border-radius: var(--borderRad);
+	transition: text-shadow, box-shadow 0.6s;	 
+}
+
+.contacts li:hover {
+	text-shadow: 0 0 1px var(--mainColor2);	
+	box-shadow: inset 0 0 15px 5px var(--backColor);
 }
 
 .contacts img {
 	width: 1rem;
-	padding-right: 5px;	
+	padding: 0 0.5rem;	
 }
 
 footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 13rem 1rem 1rem;
+	margin: 12rem 1rem 2rem;
+	padding: 1rem;
+	background-color: var(--backColor);
+	border: 1px solid var(--textColor);
+	border-radius: var(--borderRad);
 }
 
 footer a {
 	display: flex;
 	justify-content: flex-start;
    align-items: center;	
-	text-decoration: none;	
-}
-
-footer span {
-	padding-left: 3px;
-	color: var(--textColor);
-	font-variant: small-caps;
-   font-size: 1.5rem;	
+	text-decoration: none;
+	text-transform: uppercase;	
 }
 
 footer img {
 	height: 2rem;
+	padding-right: 1rem;
 }
