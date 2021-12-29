@@ -21,7 +21,7 @@ body {
 .wrapper {
 	display: flex;
 	width: 60rem;	
-	height: 100%;	
+	height: 100%;
 }
 
 aside {
@@ -352,8 +352,7 @@ footer img {
 }
 
 
-pre {
-	position: relative;
+pre {	
 	padding: 0 0.7rem;
 	margin: 0.5rem 0;
    font-style: normal;        
@@ -361,7 +360,7 @@ pre {
 
 button {
 	position: absolute;
-	bottom: 4rem;
+	bottom: 1rem;
 	right: 2rem;
 	width: 5rem;
 	font-size: 1rem;
@@ -383,6 +382,25 @@ button {
 		color: white;		
 	 }
 	100% { 
-		background-color: greenyellow);		
+		background-color: greenyellow;		
 	 }
-  }
+}
+
+.codewars {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0.7rem;
+	width: 4.2rem;
+	font-size: 0.6rem;
+	font-style: normal;
+	text-decoration: none;
+	padding-bottom: 0.2rem;
+	background-color: var(--body-color);
+}
+
+.codewars img {
+	width: 4rem;
+}

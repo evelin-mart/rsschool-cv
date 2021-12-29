@@ -78,8 +78,8 @@
 					</li>
 				</ul>
 			</section>
-
-			<section>
+			<section style="flex-grow: 1; background-color: transparent;"></section>
+			<section style="margin-bottom: 1.6rem;">
 				<h2>contacts</h2>
 				<ul class="contacts">
 					<li>
@@ -172,7 +172,8 @@
 						<div class="line-right"></div>
 						<h2 class="right" id='code'>Code example</h2>
 					</div>
-					<pre>
+					<div style="position: relative;">
+						<pre>
 <code>//reverse a string without using in-built methods
 
 function reverse(string) {
@@ -180,10 +181,15 @@ function reverse(string) {
   let reversed = '';
   while (i) reversed += string[--i];
 return reversed;
-}</code>
-<button onclick="tryIt()">Try it!</button>
-</pre>
+}</code></pre>
 
+						<button onclick="tryIt()">Try it!</button>
+						<a class="codewars" href="https://www.codewars.com/users/evelin-mart">
+							<img src="images/codewars.svg" alt="codewars">
+							evelin-mart
+						</a>
+
+					</div>
 				</section>
 			</main>
 
