@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/night-owl.min.css" />
-    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="icon" href="./assets/favicon.png" />
+    <script src="./js/highlight.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
     <title>Evelin Martina</title>
   </head>
   <body>
@@ -35,7 +39,7 @@
                 <a class="menu__link" href="#lang">Language</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#about">Contacts</a>
+                <a class="menu__link" href="#contacts">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -45,11 +49,93 @@
     <main>
       <div class="container">
         <div class="main">
-          <section class="section"></section>
-          <section class="section"></section>
-          <section class="section"></section>
-          <section class="section"></section>
-          <section class="section"></section>
+          <section class="section">
+            <img src="./assets/img/avatar.jpg" alt="avatar" class="avatar" />
+          </section>
+          <section class="section" id="contacts">
+            <h1>Evelin Martina</h1>
+            <p class="title">junior frontend developer</p>
+            <ul class="contacts">
+              <li class="contacts__item">Location: Minsk, Belarus</li>
+              <li class="contacts__item">
+                Email:
+                <a href="mailto:evalouis666@gmail.com">
+                  evalouis666@gmail.com
+                </a>
+              </li>
+              <li class="contacts__item">
+                GitHub:
+                <a href="https://github.com/evelin-mart" target="_blank">
+                  evelin-mart
+                </a>
+              </li>
+              <li class="contacts__item">
+                Discord:
+                <a href="https://discord.com/" target="_blank">
+                  Evelin Martina#8150
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="section" id="about">
+            <h2>about me •</h2>
+          </section>
+
+          <section class="section" id="edu">
+            <h2>education •</h2>
+            <ul class="list">
+              <li class="list__item">
+                RS School «JavaScript/Front-end» (in progress)
+              </li>
+              <li class="list__item">
+                Belorussian State University of Informatics and Radioelectronics
+              </li>
+              <li class="list__item">
+                Belorussian State Academy of Telecommunications
+              </li>
+            </ul>
+          </section>
+
+          <section class="section" id="skills">
+            <h2>skills •</h2>
+            <ul class="list">
+              <li class="list__item">
+                <span class="list__skills"> HTML5, CSS3, JavaScript</span>
+              </li>
+              <li class="list__item">GIT, Github</li>
+              <li class="list__item">Figma</li>
+            </ul>
+          </section>
+
+          <section class="section" id="code">
+            <h2>code •</h2>
+            <div class="pre">
+              <pre><code>/*reverse a string 
+without using in-built methods*/
+
+function reverse(string) {
+  let i = string.length;
+  let reversed = '';
+  while (i) reversed += string[--i];
+return reversed;
+}</code></pre>
+              <button class="example">Try it!</button>
+              <a
+                class="codewars"
+                href="https://www.codewars.com/users/evelin-mart"
+                target="_blank"
+              >
+                <img src="./assets/svg/codewars.svg" alt="codewars" />
+              </a>
+            </div>
+          </section>
+
+          <section class="section" id="exp">
+            <h2>experience •</h2>
+          </section>
+          <section class="section" id="lang">
+            <h2>language</h2>
+          </section>
         </div>
       </div>
     </main>

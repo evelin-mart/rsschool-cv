@@ -1,9 +1,10 @@
-function reverse(string) {
+function reverse() {
+  let string = prompt("Type anything", "");
   let i = string.length;
   let reversed = "";
   while (i) reversed += string[--i];
-  return reversed;
+  alert(reversed);
 }
 
-//let string = prompt('Type anything', '');
-//alert(reverse(string));
+const example = document.querySelector(".example");
+example.addEventListener("click", reverse);
