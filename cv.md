@@ -1,31 +1,35 @@
 ---
 title: "Evelin Martina"
 ---
-# Evelin Martina 
 
-## contacts ##
+# Evelin Martina
 
-* __Location:__ Minsk, Belarus
-* __Phone:__ +375 25 791-61-83
-* __e-mail:__ <evalouis666@gmail.com>
-* __GitHub:__ [evelin-mart](https://github.com/evelin-mart)
-* __Discord:__ Evelin Martina (@evelin-mart)
+## contacts
 
-## About me ##
+- **Location:** Minsk, Belarus
+- **e-mail:** <evalouis666@gmail.com>
+- **GitHub:** [evelin-mart](https://github.com/evelin-mart)
+- **Discord:** Evelin Martina (@evelin-mart)
 
-Since april'2016 till now I was a _system administrator_ in a company group. I'm great experienced in servicing servers (such as DC, AD, DNS and DHCP), workstations, user's applications.
-Programming has always seemed like an unattainable dream to me. But now, after several years of technical support, I am tired of fixing somebody's bugs, I find myself smart enough to create my own!  
-My big passion is learning, and studying programming is now more accessible than ever and it never ends. So, i'm extremely aimed at learning deep into _FrontEnd development_ to gain an interesting job and permanently improve my skills.
+## About me
 
->A mind needs books as a sword needs a whetstone, if it is to keep it's edge.
+Since 2016 I was a _system administrator_ in a company group.
+Programming has always seemed like an unattainable dream for me.
+But now, after several years of technical support, I find myself
+smart enough, and studying programming is now more accessible than
+ever.
+My big passion is _learning_, so i’m aimed to gain an interesting
+job and permanently improve my skills.
 
-## Skills ##
-Basics:
-+ __HTML, CSS, JavaScript__
-+ __Git, GitHub__
-+ __VS Code__
+> A mind needs books as a sword needs a whetstone, if it is to keep it's edge.
 
-## Code example ##
+## Skills
+
+- **HTML, CSS, JavaScript**
+- **Git, GitHub**
+- **VS Code, Figma**
+
+## Code example
 
 ```JavaScript
 //reverse a string without using in-built methods
@@ -36,21 +40,26 @@ function reverse(string) {
   while (i) reversed += string[--i];
 return reversed;
 }
-```  
+```
 
-## Education ##
+## Education
 
-* 2012-2016 Belorussian State University of Informatics and Radioelectronics
-* 2008-2012 Belorussian State Academy of Telecommunications
-### courses ###
-* 2021 RS School «JavaScript/Front-end. Pre-School» (in progress)
+- 2012-2016 Belorussian State University of Informatics and Radioelectronics
+- 2008-2012 Belorussian State Academy of Telecommunications
 
-## Experience ##
+### courses
 
-My first project is Markdown [Curriculum Vitae](https://evelin-mart.github.io/rsschool-cv/cv) on GitHub Pages [[repository]](https://github.com/evelin-mart/rsschool-cv/tree/gh-pages).
+- 2021-... RS School «JavaScript/Front-end» (in progress)
+
+## Experience
+
+- [Curriculum Vitae](https://evelin-mart.github.io/rsschool-cv/)
+- [Memory game](https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/memory-game/)
+- [Image gallery](https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/image-galery/)
+- [Photographer's portfolio](https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/portfolio/)
 
 _To be continued..._
 
-## English level ##
+## English level
 
-__A2+__ Pre-intermediate (according to Streamline tests)
+**A2+** Pre-intermediate
