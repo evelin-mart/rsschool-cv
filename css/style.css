@@ -53,7 +53,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
 }
 
 .menu__link {
@@ -137,9 +136,68 @@ body {
   }
 }
 
+.text {
+  line-height: 1.1;
+  text-align: justify;
+  text-indent: 10px;
+  padding-bottom: 10px;
+}
+
 #exp {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.experience {
+  padding: 20px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 25px;
+}
+
+.project {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 250px;
+          flex: 0 1 250px;
+  position: relative;
+  border: 2px solid #303c47;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.project:hover .project__description {
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+}
+
+.project__description {
+  position: absolute;
+  top: 88%;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: white;
+  text-shadow: 0 0 1px black;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #contacts {
@@ -201,12 +259,13 @@ h2::after {
 }
 
 .title {
+  padding-bottom: 10px;
   font-size: 20px;
   font-variant: small-caps;
 }
 
 .contacts {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .contacts__item {
@@ -235,6 +294,7 @@ h2::after {
   width: 20px;
   height: 20px;
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -243,21 +303,27 @@ h2::after {
 }
 
 .contacts__item:nth-child(2)::before {
-  background-image: url(../assets/svg/email.svg);
+  background-image: url(../assets/svg/english.svg);
+  -webkit-filter: invert(69%) sepia(2%) saturate(2411%) hue-rotate(75deg) brightness(84%) contrast(89%);
+          filter: invert(69%) sepia(2%) saturate(2411%) hue-rotate(75deg) brightness(84%) contrast(89%);
 }
 
 .contacts__item:nth-child(3)::before {
+  background-image: url(../assets/svg/email.svg);
+}
+
+.contacts__item:nth-child(4)::before {
   background-image: url(../assets/svg/github.svg);
   -webkit-filter: invert(69%) sepia(2%) saturate(2411%) hue-rotate(75deg) brightness(84%) contrast(89%);
           filter: invert(69%) sepia(2%) saturate(2411%) hue-rotate(75deg) brightness(84%) contrast(89%);
 }
 
-.contacts__item:nth-child(4)::before {
+.contacts__item:nth-child(5)::before {
   background-image: url(../assets/svg/discord.svg);
 }
 
 .list {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .list__item {
@@ -278,8 +344,21 @@ h2::after {
 .list__skills {
   display: block;
   color: #fff;
+}
+
+.list__item:nth-child(1) .list__skills {
   background: -webkit-gradient(linear, left top, right top, from(#303c47), color-stop(85%, #829984), to(white));
   background: linear-gradient(90deg, #303c47 0%, #829984 85%, white 100%);
+}
+
+.list__item:nth-child(2) .list__skills {
+  background: -webkit-gradient(linear, left top, right top, from(#303c47), color-stop(65%, #829984), to(white));
+  background: linear-gradient(90deg, #303c47 0%, #829984 65%, white 100%);
+}
+
+.list__item:nth-child(3) .list__skills {
+  background: -webkit-gradient(linear, left top, right top, from(#303c47), color-stop(80%, #829984), to(white));
+  background: linear-gradient(90deg, #303c47 0%, #829984 80%, white 100%);
 }
 
 .pre {
