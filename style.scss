@@ -1,16 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&display=swap");
 
-html {
+* {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
-
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
   font-family: Cabin;
   font-size: 16px;
+}
+.hidden {
+  position: relative;
+  overflow-x: hidden;
+}
+.menu-open {
+  overflow: hidden;
 }
 
 .container {
@@ -27,12 +31,19 @@ body {
   align-items: center;
   height: 45px;
   background-color: #303c47;
+  overflow: hidden;
 }
 .menu {
   display: flex;
   align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 45px;
+    width: auto;
+  }
 }
 .menu__item {
+  padding: 10px 0;
 }
 .menu__link {
   padding: 0 10px;
@@ -40,6 +51,9 @@ body {
   font-size: 18px;
   line-height: 36px;
   color: white;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .menu__link::after {
@@ -70,6 +84,62 @@ body {
   }
 }
 
+.hamburger .line {
+  z-index: 10;
+  width: 50px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  margin: 10px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger {
+  display: none;
+  order: 10;
+  margin-right: 10px;
+  @media (max-width: 768px) {
+    display: block;
+    z-index: 10;
+  }
+}
+.hamburger.menu-open .line {
+  background-color: white;
+}
+.hamburger.menu-open .line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.menu-open .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+.hamburger.menu-open .line:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+.hamburger:hover .line {
+  background-color: #cecece;
+}
+.hamburger:hover {
+  cursor: pointer;
+}
+nav {
+  @media (max-width: 768px) {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    bottom: 0;
+    background-color: #303c47;
+    z-index: 2;
+    &.menu-open {
+      position: fixed;
+      overflow-y: scroll;
+      right: 0;
+    }
+  }
+}
+
 .main {
   display: flex;
   flex-wrap: wrap;
@@ -97,11 +167,14 @@ body {
   justify-content: stretch;
 }
 .experience {
-  padding: 20px 0;
+  padding: 20px 10px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
+  @media (max-width: 585px) {
+    justify-content: center;
+  }
 }
 .project {
   flex: 0 1 250px;
@@ -113,7 +186,7 @@ body {
     width: 100%;
   }
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     .project__description {
       background-color: rgba(0, 0, 0, 0.6);
       top: 0;
@@ -332,6 +405,7 @@ h2 {
   color: white;
   text-transform: uppercase;
   transition: 0.5s;
+  overflow: hidden;
   a {
     font-size: 18px;
     color: inherit;
