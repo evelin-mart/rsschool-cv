@@ -59,7 +59,7 @@
             <p class="title">junior frontend developer</p>
             <ul class="contacts">
               <li class="contacts__item">Location: Minsk, Belarus</li>
-              <li class="contacts__item">A2+ Pre-intermediate</li>
+              <li class="contacts__item">B1 Pre-intermediate</li>
               <li class="contacts__item">
                 Email:
                 <a href="mailto:evalouis666@gmail.com">
@@ -76,6 +76,12 @@
                 Discord:
                 <a href="https://discord.com/" target="_blank">
                   Evelin Martina#8150
+                </a>
+              </li>
+              <li class="contacts__item">
+                Linkedin:
+                <a href="https://www.linkedin.com/in/evelin-martina/?locale=en_US" target="_blank">
+                  Evelin Martina
                 </a>
               </li>
             </ul>
@@ -112,32 +118,81 @@
 
           <section class="section" id="skills">
             <h2>skills •</h2>
-            <ul class="list">
-              <li class="list__item">
-                <span class="list__skills"> HTML5, CSS3, JavaScript </span>
-              </li>
-              <li class="list__item">
-                <span class="list__skills"> GIT, Github </span>
-              </li>
-              <li class="list__item">
-                <span class="list__skills">Figma</span>
-              </li>
-            </ul>
+              <ul class="list">
+                <li class="list__item">
+                  HTML5 <span>semantic, responsive, adaptive</span>
+                </li>
+                <li class="list__item">
+                  CSS3 <span>BEM</span>
+                <li class="list__item">
+                  JavaScript <span>closures, async programming, rendering</span>
+                </li>
+                <li class="list__item">
+                  Sass <span>Scss, architecture, patterns</span>
+                </li>
+                <li class="list__item">
+                  GIT <span>Github, Git Bash, interactive rebase</span>
+                </li>
+                <li class="list__item">
+                  Figma
+                </li>
+              </ul>           
           </section>
 
           <section class="section" id="code">
             <h2>code •</h2>
             <div class="pre">
-              <pre><code>/*reverse a string 
-without using in-built methods*/
+              <pre><code>
+class VigenereCipheringMachine {
+  constructor(type = true) {
+    this.type = type;
+    this.alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  }
+  encrypt(message, key) {
+    if (!message || !key) {
+      throw new Error(`Incorrect arguments!`);
+    }
+    message = message.toUpperCase().split("");
+    key = key.toUpperCase();
+    let keyIndex = 0;
+    for (let i = 0; i < message.length; i++) {
+      if (message[i].match(/[A-Z]/)) {
+        let newIndex =
+          this.alphabet.indexOf(message[i]) +
+          this.alphabet.indexOf(key[keyIndex]);
+        if (newIndex > this.alphabet.length - 1) {
+          newIndex -= this.alphabet.length;
+        }
+        message[i] = this.alphabet[newIndex];
+        keyIndex = keyIndex === key.length - 1 ? 0 : keyIndex + 1;
+      }
+    }
+    return this.type ? message.join("") : message.reverse().join("");
+  }
+  decrypt(message, key) {
+    if (!message || !key) {
+      throw new Error(`Incorrect arguments!`);
+    }
+    message = message.toUpperCase().split("");
+    key = key.toUpperCase();
+    let keyIndex = 0;
+    for (let i = 0; i < message.length; i++) {
+      if (message[i].match(/[A-Z]/)) {
+        let newIndex =
+          this.alphabet.indexOf(message[i]) -
+          this.alphabet.indexOf(key[keyIndex]);
+        if (newIndex < 0) {
+          newIndex += this.alphabet.length;
+        }
+        message[i] = this.alphabet[newIndex];
+        keyIndex = keyIndex === key.length - 1 ? 0 : keyIndex + 1;
+      }
+    }
+    return this.type ? message.join("") : message.reverse().join("");
+  }
+}
 
-function reverse(string) {
-  let i = string.length;
-  let reversed = '';
-  while (i) reversed += string[--i];
-return reversed;
-}</code></pre>
-              <button class="example">Try it!</button>
+</code></pre>
               <a
                 class="codewars"
                 href="https://www.codewars.com/users/evelin-mart"
@@ -150,7 +205,25 @@ return reversed;
 
           <section class="section" id="exp">
             <h2>experience •</h2>
+            <li class="list__item">
+              RSschool JS/FE PRE-SCHOOL <a href="https://app.rs.school/certificate/060s4g2z" class="link_cert" target="_blank"> view certificate</a>
+            </li>
             <div class="experience">
+              <a
+                class="project"
+                href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/portfolio/"
+                target="_blank"
+              >
+                <img src="./assets/img/portfolio.PNG" alt="portfolio" />
+                <div class="project__description">
+                  <p class="title">portfolio</p>
+                  <p class="text">
+                    The photographer's portfolio landing page. The page is fully
+                    responsive and interactive. There is a custom video player, 
+                    2 themes, 2 languages.
+                  </p>
+                </div>
+              </a>
               <a
                 class="project"
                 href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/image-galery/"
@@ -175,26 +248,34 @@ return reversed;
                 <div class="project__description">
                   <p class="title">memory game</p>
                   <p class="text">
-                    A popular card game with pleasant music. 4 difficulty
+                    The popular card game with pleasant music. 4 difficulty
                     levels. 3 variants of card face. 10 recent results in tables
-                    sort by difficulty. Best result is saved.
+                    sort by difficulty. Best result is saved. JS rendering.
                   </p>
                 </div>
               </a>
+              </div>
+              <li class="list__item">
+                RSschool «JavaScript/Front-end» stage 1
+              </li>
+              <div class="experience">
               <a
                 class="project"
-                href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/portfolio/"
+                href="https://rolling-scopes-school.github.io/evelin-mart-JSFE2022Q1/shelter/pages/main/"
                 target="_blank"
               >
-                <img src="./assets/img/portfolio.PNG" alt="portfolio" />
+                <img src="./assets/img/cozy.PNG" alt="cozy house" />
                 <div class="project__description">
-                  <p class="title">portfolio</p>
+                  <p class="title">cozy house</p>
                   <p class="text">
-                    The photographer's portfolio landing page. The page is fully
-                    responsive and interactive. There is a custom video player.
+                    The shelter two-pages site, fully
+                    responsive and interactive. There is slider, 
+                    pagination and modal window. Sass architecture 
+                    with patterns were used.
                   </p>
                 </div>
               </a>
+              </div>
             </div>
           </section>
         </div>
