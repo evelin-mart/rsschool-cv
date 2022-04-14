@@ -188,7 +188,7 @@ nav {
   &:hover {
     transform: scale(1.05);
     .project__description {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.8);
       top: 0;
     }
   }
@@ -201,7 +201,7 @@ nav {
   padding: 0 10px;
   color: white;
   text-shadow: 0 0 1px black;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   transition: 0.3s;
 }
 
@@ -210,6 +210,16 @@ nav {
   @media (max-width: 768px) {
     align-items: center;
   }
+}
+
+#skills {
+  flex-basis: 100%;
+}
+
+.skills__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
 }
 
 .avatar {
@@ -301,6 +311,11 @@ h2 {
 .contacts__item:nth-child(5)::before {
   background-image: url(../assets/svg/discord.svg);
 }
+.contacts__item:nth-child(6)::before {
+  background-image: url(../assets/svg/linkedin.svg);
+  filter: invert(69%) sepia(2%) saturate(2411%) hue-rotate(75deg)
+    brightness(84%) contrast(89%);
+}
 
 .list {
   padding: 10px 0;
@@ -309,6 +324,17 @@ h2 {
   position: relative;
   padding: 0 0 10px 25px;
   line-height: 20px;
+  span {
+    position: relative;
+    padding-left: 10px;
+    font-size: 0.8em;
+    &::before {
+      content: "⬥";
+      position: absolute;
+  top: -1px;
+  left: 0;
+    }
+  }
 }
 .list__item::before {
   content: "◈";
@@ -355,42 +381,35 @@ h2 {
   }
 }
 
+#code {
+  flex-basis: 100%;
+}
 .pre {
   position: relative;
   font-size: 14px;
-  max-width: 500px;
+  max-width: 85%;
+  max-height: 395px;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+&::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+&::-webkit-scrollbar-thumb {
+  background: #c792ea; 
+}
+&::-webkit-scrollbar-thumb:hover {
+  background: #addb67; 
+}
 }
 .codewars {
   position: absolute;
   top: 0;
   right: 0;
-  width: 45px;
+  width: 10%;
+  min-width: 40px;
   img {
-    width: 45px;
-  }
-}
-.example {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 45px;
-  font-family: inherit;
-  text-align: center;
-  line-height: 24px;
-  text-transform: uppercase;
-  background-color: greenyellow;
-  animation: tryIt 2s infinite;
-}
-@keyframes tryIt {
-  0% {
-    background-color: greenyellow;
-  }
-  50% {
-    background-color: #b1361e;
-    color: white;
-  }
-  100% {
-    background-color: greenyellow;
+    width: 100%;
   }
 }
 
@@ -404,14 +423,14 @@ h2 {
 .footer__author {
   color: white;
   text-transform: uppercase;
-  transition: 0.5s;
   overflow: hidden;
   a {
     font-size: 18px;
     color: inherit;
-  }
-  &:hover {
-    color: yellow;
+    transition: 0.5s;
+    &:hover {
+      color: #addb67;
+    }
   }
 }
 .footer__school {
@@ -429,5 +448,18 @@ h2 {
   &:hover {
     filter: invert(83%) sepia(82%) saturate(7500%) hue-rotate(355deg)
       brightness(103%) contrast(107%);
+  }
+}
+
+.link_cert {
+  font-size: 1rem;
+  font-weight: normal;
+  color: blue;
+  transition: all 0.3s linear;
+  &:visited {
+    color: blue;
+  }
+  &:hover {
+    color: #c792ea;
   }
 }
