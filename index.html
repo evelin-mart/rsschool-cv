@@ -128,13 +128,16 @@
                   JavaScript <span>closures, async programming, rendering</span>
                 </li>
                 <li class="list__item">
-                  Sass <span>Scss, architecture, patterns</span>
+                  SASS <span>Scss, architecture, patterns</span>
                 </li>
                 <li class="list__item">
-                  GIT <span>Github, Git Bash, interactive rebase</span>
+                  GIT <span>Github, Git Bash</span>
                 </li>
                 <li class="list__item">
                   Figma
+                </li>
+                <li class="list__item">
+                  Node JS (basics) 
                 </li>
               </ul>           
           </section>
@@ -142,56 +145,25 @@
           <section class="section" id="code">
             <h2>code •</h2>
             <div class="pre">
-              <pre><code>
-class VigenereCipheringMachine {
-  constructor(type = true) {
-    this.type = type;
-    this.alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  }
-  encrypt(message, key) {
-    if (!message || !key) {
-      throw new Error(`Incorrect arguments!`);
-    }
-    message = message.toUpperCase().split("");
-    key = key.toUpperCase();
-    let keyIndex = 0;
-    for (let i = 0; i < message.length; i++) {
-      if (message[i].match(/[A-Z]/)) {
-        let newIndex =
-          this.alphabet.indexOf(message[i]) +
-          this.alphabet.indexOf(key[keyIndex]);
-        if (newIndex > this.alphabet.length - 1) {
-          newIndex -= this.alphabet.length;
-        }
-        message[i] = this.alphabet[newIndex];
-        keyIndex = keyIndex === key.length - 1 ? 0 : keyIndex + 1;
-      }
-    }
-    return this.type ? message.join("") : message.reverse().join("");
-  }
-  decrypt(message, key) {
-    if (!message || !key) {
-      throw new Error(`Incorrect arguments!`);
-    }
-    message = message.toUpperCase().split("");
-    key = key.toUpperCase();
-    let keyIndex = 0;
-    for (let i = 0; i < message.length; i++) {
-      if (message[i].match(/[A-Z]/)) {
-        let newIndex =
-          this.alphabet.indexOf(message[i]) -
-          this.alphabet.indexOf(key[keyIndex]);
-        if (newIndex < 0) {
-          newIndex += this.alphabet.length;
-        }
-        message[i] = this.alphabet[newIndex];
-        keyIndex = keyIndex === key.length - 1 ? 0 : keyIndex + 1;
-      }
-    }
-    return this.type ? message.join("") : message.reverse().join("");
-  }
-}
+              <pre><code>// generation of unique item sequency
 
+function generateCardSequence(perPage, pagesCount, itemsCount) {
+  const sequency = [];
+  for (let i = 0; i < pagesCount; i++) {
+    const miniSequence = new Set();
+    while (miniSequence.size < perPage) {
+      const num = getRandomInt(0, itemsCount - 1);
+      const count = sequency
+        .filter(item => item === num).length;
+      const maxCount = Math.floor((sequency.length + miniSequence.size) / itemsCount);
+      if (count <= maxCount) {
+        miniSequence.add(num)
+      }
+    }
+    sequency.push(...miniSequence)
+  }
+  return sequency
+}
 </code></pre>
               <a
                 class="codewars"
@@ -205,78 +177,105 @@ class VigenereCipheringMachine {
 
           <section class="section" id="exp">
             <h2>experience •</h2>
-            <li class="list__item">
-              RSschool JS/FE PRE-SCHOOL <a href="https://app.rs.school/certificate/060s4g2z" class="link_cert" target="_blank"> view certificate</a>
-            </li>
-            <div class="experience">
-              <a
-                class="project"
-                href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/portfolio/"
-                target="_blank"
-              >
-                <img src="./assets/img/portfolio.PNG" alt="portfolio" />
-                <div class="project__description">
-                  <p class="title">portfolio</p>
-                  <p class="text">
-                    The photographer's portfolio landing page. The page is fully
-                    responsive and interactive. There is a custom video player, 
-                    2 themes, 2 languages.
-                  </p>
+            <ul class="list list_exp">
+              <li class="list__item">
+                RSschool JS/FE PRE-SCHOOL <a href="https://app.rs.school/certificate/060s4g2z" class="link_cert" target="_blank"> view certificate</a>
+                <div class="experience">
+                <a
+                  class="project"
+                  href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/portfolio/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/portfolio.PNG" alt="portfolio" />
+                  <div class="project__description">
+                    <p class="title">portfolio</p>
+                    <p class="text">
+                      The photographer's portfolio landing page. The page is fully
+                      responsive and interactive. There is a custom video player, 
+                      2 themes, 2 languages.
+                    </p>
+                  </div>
+                </a>
+                <a
+                  class="project"
+                  href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/image-galery/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/api.PNG" alt="image gallery" />
+                  <div class="project__description">
+                    <p class="title">image gallery</p>
+                    <p class="text">
+                      The application displaying photos received from Unsplash
+                      API. Fully responsive. Photos can be opened in full screen
+                      mode with a slider. There is also a page slider.
+                    </p>
+                  </div>
+                </a>
+                <a
+                  class="project"
+                  href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/memory-game/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/mg.PNG" alt="memory game" />
+                  <div class="project__description">
+                    <p class="title">memory game</p>
+                    <p class="text">
+                      The popular card game with pleasant music. 4 difficulty
+                      levels. 3 variants of card face. 10 recent results in tables
+                      sort by difficulty. Best result is saved. JS rendering.
+                    </p>
+                  </div>
+                </a>              
                 </div>
-              </a>
-              <a
-                class="project"
-                href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/image-galery/"
-                target="_blank"
-              >
-                <img src="./assets/img/api.PNG" alt="image gallery" />
-                <div class="project__description">
-                  <p class="title">image gallery</p>
-                  <p class="text">
-                    The application displaying photos received from Unsplash
-                    API. Fully responsive. Photos can be opened in full screen
-                    mode with a slider. There is also a page slider.
-                  </p>
-                </div>
-              </a>
-              <a
-                class="project"
-                href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/memory-game/"
-                target="_blank"
-              >
-                <img src="./assets/img/mg.PNG" alt="memory game" />
-                <div class="project__description">
-                  <p class="title">memory game</p>
-                  <p class="text">
-                    The popular card game with pleasant music. 4 difficulty
-                    levels. 3 variants of card face. 10 recent results in tables
-                    sort by difficulty. Best result is saved. JS rendering.
-                  </p>
-                </div>
-              </a>
-              </div>
+              </li>
               <li class="list__item">
                 RSschool «JavaScript/Front-end» stage 1
-              </li>
-              <div class="experience">
-              <a
-                class="project"
-                href="https://rolling-scopes-school.github.io/evelin-mart-JSFE2022Q1/shelter/pages/main/"
-                target="_blank"
-              >
-                <img src="./assets/img/cozy.PNG" alt="cozy house" />
-                <div class="project__description">
-                  <p class="title">cozy house</p>
-                  <p class="text">
-                    The shelter two-pages site, fully
-                    responsive and interactive. There is slider, 
-                    pagination and modal window. Sass architecture 
-                    with patterns were used.
-                  </p>
+                <div class="experience">
+                <a
+                  class="project"
+                  href="https://rolling-scopes-school.github.io/evelin-mart-JSFE2022Q1/shelter/pages/main/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/cozy.PNG" alt="cozy house" />
+                  <div class="project__description">
+                    <p class="title">cozy house</p>
+                    <p class="text">
+                      The shelter two-pages site, fully
+                      responsive and interactive. There is slider, 
+                      pagination and modal window. Sass architecture 
+                      with patterns were used.
+                    </p>
+                  </div>
+                </a>
+                <a
+                  class="project"
+                  href="https://evelin-mart.github.io/rsschool-projects/virtual-keyboard/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/k-board.png" alt="virtual keyboard" />
+                  <div class="project__description">
+                    <p class="title">virtual keyboard</p>
+                    <p class="text">
+                      The virtual keyboard is able to switch between two language layouts (both by mouse and physical keyboard). Clicks on the buttons and pressing keys on a physical keyboard input symbols to the text area located on the page.
+                    </p>
+                  </div>
+                </a>
+                <a
+                  class="project"
+                  href="https://evelin-mart.github.io/cssMemSlider/cssMemSlider/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/slider.png" alt="CSS slider" />
+                  <div class="project__description">
+                    <p class="title">css slider</p>
+                    <p class="text">
+                      Pure CSS slider without using JS. Picture and caption changing is animated. Picture changes by click on control. Controls are interactive.
+                    </p>
+                  </div>
+                </a>
                 </div>
-              </a>
-              </div>
-            </div>
+              </li>
+            </ul>
           </section>
         </div>
       </div>
