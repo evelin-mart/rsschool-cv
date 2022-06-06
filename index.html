@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/night-owl.min.css" />
+    <link rel="icon" href="./assets/favicon.png" />
+    <script src="./js/highlight.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <title>Evelin Martina</title>
+  </head>
+  <body class="hidden">
+    <header>
+      <div class="container">
+        <div class="header">
+          <nav>
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="menu__link" href="#about">About</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#edu">Education</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#skills">Skills</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#exp">Experience</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#code">Code</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="main">
+          <div class="section">
+            <img src="./assets/img/avatar.jpg" alt="avatar" class="avatar" />
+          </div>
+          <section class="section" id="contacts">
+            <h1>Evelin Martina</h1>
+            <p class="title">junior frontend developer</p>
+            <ul class="contacts">
+              <li class="contacts__item">Location: Minsk, Belarus</li>
+              <li class="contacts__item">B1 Pre-intermediate</li>
+              <li class="contacts__item">
+                Email:
+                <a href="mailto:evalouis666@gmail.com">
+                  evalouis666@gmail.com
+                </a>
+              </li>
+              <li class="contacts__item">
+                GitHub:
+                <a href="https://github.com/evelin-mart" target="_blank">
+                  evelin-mart
+                </a>
+              </li>
+              <li class="contacts__item">
+                Discord:
+                <a href="https://discord.com/" target="_blank">
+                  Evelin Martina#8150
+                </a>
+              </li>
+              <li class="contacts__item">
+                Linkedin:
+                <a href="https://www.linkedin.com/in/evelin-martina/?locale=en_US" target="_blank">
+                  Evelin Martina
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="section" id="about">
+            <h2>about me •</h2>
+            <p class="text">
+              Since 2016 I was a system administrator in a company group.
+              Programming has always seemed like an unattainable dream for me.
+              But now, after several years of technical support, I find myself
+              smart enough, and studying programming is now more accessible than
+              ever.
+            </p>
+            <p class="text">
+              My big passion is learning, so i’m aimed to gain an interesting
+              job and permanently improve my skills.
+            </p>
+          </section>
+
+          <section class="section" id="edu">
+            <h2>education •</h2>
+            <ul class="list">
+              <li class="list__item">
+                RS School «JavaScript/Front-end» (in progress)
+              </li>
+              <li class="list__item">
+                Belorussian State University of Informatics and Radioelectronics
+              </li>
+              <li class="list__item">
+                Belorussian State Academy of Telecommunications
+              </li>
+            </ul>
+          </section>
+
+          <section class="section" id="skills">
+            <h2>skills •</h2>
+              <ul class="list">
+                <li class="list__item">
+                  HTML5 <span>semantic, responsive, adaptive</span>
+                </li>
+                <li class="list__item">
+                  CSS3 <span>BEM</span>
+                <li class="list__item">
+                  JavaScript <span>closures, async programming, rendering</span>
+                </li>
+                <li class="list__item">
+                  SASS <span>Scss, architecture, patterns</span>
+                </li>
+                <li class="list__item">
+                  GIT <span>Github, Git Bash</span>
+                </li>
+                <li class="list__item">
+                  Figma
+                </li>
+                <li class="list__item">
+                  Node JS (basics) 
+                </li>
+              </ul>           
+          </section>
+
+          <section class="section" id="code">
+            <h2>code •</h2>
+            <div class="pre">
+              <pre><code>// generation of unique item sequency
+
+function generateCardSequence(perPage, pagesCount, itemsCount) {
+  const sequency = [];
+  for (let i = 0; i < pagesCount; i++) {
+    const miniSequence = new Set();
+    while (miniSequence.size < perPage) {
+      const num = getRandomInt(0, itemsCount - 1);
+      const count = sequency
+        .filter(item => item === num).length;
+      const maxCount = Math.floor((sequency.length + miniSequence.size) / itemsCount);
+      if (count <= maxCount) {
+        miniSequence.add(num)
+      }
+    }
+    sequency.push(...miniSequence)
+  }
+  return sequency
+}
+</code></pre>
+              <a
+                class="codewars"
+                href="https://www.codewars.com/users/evelin-mart"
+                target="_blank"
+              >
+                <img src="./assets/svg/codewars.svg" alt="codewars" />
+              </a>
+            </div>
+          </section>
+
+          <section class="section" id="exp">
+            <h2>experience •</h2>
+            <ul class="list list_exp">
+              <li class="list__item">
+                RSschool JS/FE PRE-SCHOOL <a href="https://app.rs.school/certificate/060s4g2z" class="link_cert" target="_blank"> view certificate</a>
+                <div class="experience">
+                <a
+                  class="project"
+                  href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/portfolio/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/portfolio.PNG" alt="portfolio" />
+                  <div class="project__description">
+                    <p class="title">portfolio</p>
+                    <p class="text">
+                      The photographer's portfolio landing page. The page is fully
+                      responsive and interactive. There is a custom video player, 
+                      2 themes, 2 languages.
+                    </p>
+                  </div>
+                </a>
+                <a
+                  class="project"
+                  href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/image-galery/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/api.PNG" alt="image gallery" />
+                  <div class="project__description">
+                    <p class="title">image gallery</p>
+                    <p class="text">
+                      The application displaying photos received from Unsplash
+                      API. Fully responsive. Photos can be opened in full screen
+                      mode with a slider. There is also a page slider.
+                    </p>
+                  </div>
+                </a>
+                <a
+                  class="project"
+                  href="https://rolling-scopes-school.github.io/evelin-mart-JSFEPRESCHOOL/memory-game/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/mg.PNG" alt="memory game" />
+                  <div class="project__description">
+                    <p class="title">memory game</p>
+                    <p class="text">
+                      The popular card game with pleasant music. 4 difficulty
+                      levels. 3 variants of card face. 10 recent results in tables
+                      sort by difficulty. Best result is saved. JS rendering.
+                    </p>
+                  </div>
+                </a>              
+                </div>
+              </li>
+              <li class="list__item">
+                RSschool «JavaScript/Front-end» stage 1
+                <div class="experience">
+                <a
+                  class="project"
+                  href="https://rolling-scopes-school.github.io/evelin-mart-JSFE2022Q1/shelter/pages/main/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/cozy.PNG" alt="cozy house" />
+                  <div class="project__description">
+                    <p class="title">cozy house</p>
+                    <p class="text">
+                      The shelter two-pages site, fully
+                      responsive and interactive. There is slider, 
+                      pagination and modal window. Sass architecture 
+                      with patterns were used.
+                    </p>
+                  </div>
+                </a>
+                <a
+                  class="project"
+                  href="https://evelin-mart.github.io/rsschool-projects/virtual-keyboard/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/k-board.png" alt="virtual keyboard" />
+                  <div class="project__description">
+                    <p class="title">virtual keyboard</p>
+                    <p class="text">
+                      The virtual keyboard is able to switch between two language layouts (both by mouse and physical keyboard). Clicks on the buttons and pressing keys on a physical keyboard input symbols to the text area located on the page.
+                    </p>
+                  </div>
+                </a>
+                <a
+                  class="project"
+                  href="https://evelin-mart.github.io/cssMemSlider/cssMemSlider/"
+                  target="_blank"
+                >
+                  <img src="./assets/img/slider.png" alt="CSS slider" />
+                  <div class="project__description">
+                    <p class="title">css slider</p>
+                    <p class="text">
+                      Pure CSS slider without using JS. Picture and caption changing is animated. Picture changes by click on control. Controls are interactive.
+                    </p>
+                  </div>
+                </a>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <div class="footer__author">
+            <a href="https://github.com/evelin-mart" target="_blank"
+              >© 2022 evelin-mart</a
+            >
+          </div>
+          <div class="footer__school">
+            <a href="https://rs.school/js/" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
